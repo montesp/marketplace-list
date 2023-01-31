@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & h2 {
+    color: blue;
+  }
+  & p {
+    color: red;
+  }
+}
