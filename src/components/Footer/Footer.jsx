@@ -1,14 +1,31 @@
+import { ButtonSocial } from '../common/ButtonSocial/ButtonSocial';
+import LinkedinIcon from '../../assets/icons/linkedin.svg';
+import TwitterIcon from '../../assets/icons/twitter.svg';
+import GithubIcon from '../../assets/icons/github.svg';
+
 import './Footer.scss';
 
 function Footer() {
   return (
     <footer className='footer'>
       <h4 className='footer__creator-title'>Created by Pavel </h4>
-      <ul className='footer__social-media-container'>
-        <li><a href='#'>Github</a></li>
-        <li><a href='#'>Linkedin</a></li>
-        <li><a href='#'>Twitter</a></li>
-      </ul>
+      <div className='footer__social-media-container'>
+        <ButtonSocial
+          img={LinkedinIcon}
+          href='#'
+          alt='Icono de la red social linkedin'
+        />
+        <ButtonSocial
+          img={TwitterIcon}
+          href='#'
+          alt='Icono de la red social twitter'
+        />
+        <ButtonSocial
+          img={GithubIcon}
+          href='#'
+          alt='Icono de la red social github'
+        />
+      </div>
     </footer>
   );
 }
