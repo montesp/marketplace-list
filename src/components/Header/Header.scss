@@ -16,13 +16,13 @@
   &__list {
     display: flex;
     width: 40%;
-    &-item {
-      list-style-type: none;
-      margin: 0 20px;
-      color: $light-color;
-      &:hover {
-        color: $light-color-opacity;
-      }
+  }
+  &__list-item {
+    list-style-type: none;
+    margin: 0 20px;
+    color: $light-color;
+    &:hover {
+      color: $light-color-opacity;
     }
   }
 }
