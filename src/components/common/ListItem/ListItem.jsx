@@ -1,10 +1,8 @@
-import './ListItem.scss';
+import './_ListItem.scss';
 
 function ListItem() {
   return (
-    <section className='list'>
-      
-    </section>
+    <p>Item</p>
   );
 }
 
