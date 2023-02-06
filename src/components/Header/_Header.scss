@@ -23,6 +23,7 @@
     color: $light-color;
     &:hover {
       color: $light-color-opacity;
+      text-decoration: underline;
     }
   }
 }

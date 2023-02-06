@@ -1,9 +1,9 @@
 import { ButtonSocial } from '../common/ButtonSocial/ButtonSocial';
 import LinkedinIcon from '../../assets/icons/linkedin.svg';
-import TwitterIcon from '../../assets/icons/twitter.svg';
+// import TwitterIcon from '../../assets/icons/twitter.svg';
 import GithubIcon from '../../assets/icons/github.svg';
 
-import './Footer.scss';
+import './_Footer.scss';
 
 function Footer() {
   return (
@@ -12,17 +12,12 @@ function Footer() {
       <div className='footer__social-media-container'>
         <ButtonSocial
           img={LinkedinIcon}
-          href='#'
+          href='https://www.linkedin.com/in/montesp/'
           alt='Icono de la red social linkedin'
         />
         <ButtonSocial
-          img={TwitterIcon}
-          href='#'
-          alt='Icono de la red social twitter'
-        />
-        <ButtonSocial
           img={GithubIcon}
-          href='#'
+          href='https://github.com/montesp'
           alt='Icono de la red social github'
         />
       </div>
