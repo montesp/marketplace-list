@@ -1,8 +1,22 @@
 import './_ListItem.scss';
+import deleteIcon from '../../../assets/icons/trash.svg'
 
-function ListItem() {
+function ListItem({ text }) {
   return (
-    <p>Item</p>
+    <div className='list-item'>
+      <input
+        type="checkbox"
+      />
+      <label>
+        {text}
+      </label>
+      <button>
+        <img
+          src={deleteIcon}
+          alt='Icono de borrar una tarea'
+          />
+      </button>
+    </div>
   );
 }
 

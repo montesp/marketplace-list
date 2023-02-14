@@ -1,7 +1,6 @@
 @import '../../_colors.scss';
 
 .main {
-  height: 80vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
