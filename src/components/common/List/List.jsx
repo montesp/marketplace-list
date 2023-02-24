@@ -42,7 +42,6 @@ function List() {
       <ListItem
         text="Tarea 11"
       />
-
     </section>
   );
 }
