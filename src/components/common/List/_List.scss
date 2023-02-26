@@ -1,14 +1,20 @@
 @import '../../../colors.scss';
+@import '../../../mixins.scss';
 
 .list {
-  width: 400px;
-  min-width: 550px;
-  height: 300px;
+  min-width: 230px;
   display: flex;
   flex-direction: column;
-  // margin: 10px;
   padding: 5px;
   border: 2px solid $terciary-color;
   border-radius: 10px;
   overflow: auto;
+
+  @include tablet {
+    width: 330px;
+  }
+
+  @include desktop {
+    width: 300px;
+  }
 }

@@ -1,4 +1,6 @@
 @import '../../_colors.scss';
+@import '../../mixins.scss';
+
 
 .footer {
   width: 100%;
@@ -6,17 +8,25 @@
   background-color: $primary-color;
   color: $light-color;
 
+
   &__creator-title {
-    font-size: 22px;
-    width: 30%;
+    font-size: 16px;
+    line-height: 14px;
+    width: 50%;
     text-align: center;
+
+    @include tablet {
+      // Tablet changes
+    }
+
+
   }
   &__social-media-container {
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 5px;
     list-style-type: none;
     a {
       color: white;

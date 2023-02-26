@@ -1,9 +1,19 @@
 @import '../../_colors.scss';
+@import '../../mixins.scss';
 
 .main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
+  width: 90%;
   min-height: 75vh;
-  margin: 40px 100px;
+  margin: 40px auto;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
