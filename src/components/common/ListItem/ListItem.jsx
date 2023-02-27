@@ -1,6 +1,7 @@
 import './_ListItem.scss';
 import deleteIcon from '../../../assets/icons/trash.svg';
 import { useState } from 'react';
+import { Button } from '../Button/Button';
 
 function ListItem({ text }) {
   const [isSelected, setIsSelected] = useState(false);
@@ -26,15 +27,11 @@ function ListItem({ text }) {
       >
         {text}
       </label>
-      <button
-        onClick={deleteItem}
-        className='list-item__button list-item__button--delete'
-        >
-        <img
-          src={deleteIcon}
-          alt='Icono de borrar una tarea'
-          />
-      </button>
+      <Button
+        img={deleteIcon}
+        alt='Icono de borrar una tarea'
+        type='delete'
+      />
     </div>
   );
 }

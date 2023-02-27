@@ -1,6 +1,6 @@
-import './ButtonSocial.scss';
+import './_Icon.scss';
 
-function ButtonSocial({
+function Icon({
   href,
   img,
   alt,
@@ -16,4 +16,4 @@ function ButtonSocial({
   );
 }
 
-export { ButtonSocial };
+export { Icon };
