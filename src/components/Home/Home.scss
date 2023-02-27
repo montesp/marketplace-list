@@ -1,13 +1,27 @@
 @import '../../_colors.scss';
-@import '../../mixins.scss';
+@import '../../_mixins.scss';
 
 .main {
+  width: 100%;
+  min-height: 75vh;
+  margin: 20px auto;
+
+
+
+  @include desktop {
+    min-height: 78vh;
+    margin: 40px auto;
+  }
+
+ 
+}
+
+.task-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   width: 90%;
-  min-height: 75vh;
-  margin: 40px auto;
+  margin: 0 auto;
 
   @include tablet {
     grid-template-columns: repeat(2, 1fr);
@@ -15,5 +29,9 @@
 
   @include desktop {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include desktop-l {
+    grid-template: repeat(4, 1fr);
   }
 }

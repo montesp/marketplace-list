@@ -1,8 +1,6 @@
 import { ButtonSocial } from '../common/ButtonSocial/ButtonSocial';
 import LinkedinIcon from '../../assets/icons/linkedin.svg';
-// import TwitterIcon from '../../assets/icons/twitter.svg';
 import GithubIcon from '../../assets/icons/github.svg';
-
 import './_Footer.scss';
 
 function Footer() {

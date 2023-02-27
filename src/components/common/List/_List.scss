@@ -1,5 +1,4 @@
 @import '../../../colors.scss';
-@import '../../../mixins.scss';
 
 .list {
   min-width: 230px;
@@ -10,11 +9,4 @@
   border-radius: 10px;
   overflow: auto;
 
-  @include tablet {
-    width: 330px;
-  }
-
-  @include desktop {
-    width: 300px;
-  }
 }

@@ -4,7 +4,9 @@ import './Home.scss';
 function Home({children}) {
   return (
     <main className='main'>
-      {children}
+      <section className='task-container'>
+        {children}
+      </section>
     </main>
   );
 }
