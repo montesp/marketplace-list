@@ -25,6 +25,7 @@
     border-radius: 10px;
     margin: 10px auto;
     background-color: $terciary-color;
+    z-index: 3;
 
 
     @include tablet {

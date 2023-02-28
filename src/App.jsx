@@ -3,6 +3,9 @@ import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
 import { List } from './components/common/List/List';
+import { createPortal } from 'react-dom';
+import { Modal} from './components/Modal/Modal';
+import { useState } from 'react';
 
 const ListTasks = [
   {
@@ -50,16 +53,25 @@ const ListTasks = [
 
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const addList = () =>  setShowModal(!showModal);
+
   return (
     <div className="App">
       <Header/>
-      <Home>
+      <Home action={addList} >
         {ListTasks.map(list => (
-          <List key={list.id} tasks={list.tasks} />
+          <List key={list.id} tasks={list.tasks} button={addList} />
         )
         )}
       </Home>
       <Footer/>
+
+      {showModal &&
+        createPortal(
+          <Modal/>,
+          document.getElementById('modal')
+        )}
     </div>
   );
 }
