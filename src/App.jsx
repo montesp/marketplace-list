@@ -5,7 +5,8 @@ import { Home } from './components/Home/Home';
 import { List } from './components/common/List/List';
 import { createPortal } from 'react-dom';
 import { Modal} from './components/Modal/Modal';
-import { useState } from 'react';
+import { useModal } from './hooks/useModal';
+import { useLocalStorage } from './hooks/useLocalStorage';
 
 const ListTasks = [
   {
@@ -53,14 +54,14 @@ const ListTasks = [
 
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const addList = () =>  setShowModal(!showModal);
+  const { addList, showModal} = useModal();
+  const { lists } = useLocalStorage();
 
   return (
     <div className="App">
       <Header/>
       <Home action={addList} >
-        {ListTasks.map(list => (
+        {lists.map(list => (
           <List key={list.id} tasks={list.tasks} button={addList} />
         )
         )}
